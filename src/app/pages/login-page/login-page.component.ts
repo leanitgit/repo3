@@ -1,5 +1,5 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { version } from '../../../../package.json';
+//import { version } from './../../../assets/custom-data.json';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { environment } from '../../../environments/environment';
@@ -9,7 +9,7 @@ import { environment } from '../../../environments/environment';
   styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent implements OnInit {
-  public version = version;
+  public version = "0.0.1";
   email: string = null;
   password: string = null;
 
@@ -23,7 +23,8 @@ export class LoginPageComponent implements OnInit {
     this.auth.onAuthStateChanged(user => {
       if (user) {
         // check here if user must pass through getting-started
-
+        console.log("here");
+        
         // https://stackoverflow.com/questions/51455545/when-to-use-ngzone-run
         this.zone.run(() => {
           this.router.navigate([environment.entryRoute]);

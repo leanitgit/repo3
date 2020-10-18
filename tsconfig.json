@@ -1,5 +1,6 @@
 {
   "compileOnSave": false,
+  "resolveJsonModule": true,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",

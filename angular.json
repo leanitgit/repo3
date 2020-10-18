@@ -21,9 +21,8 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
@@ -53,7 +52,7 @@
               "buildOptimizer": true,
               "budgets": [
                 {
-                  "type": "initial",
+                  "type": "anyComponentStyle",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
@@ -90,7 +89,6 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ]
           }
@@ -124,15 +122,6 @@
             "production": {
               "devServerTarget": "firebase-base:serve:production"
             }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }

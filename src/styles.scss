@@ -1,3 +1,9 @@
+@import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+
+@import "./assets/styles/ag-grid.css";;
+@import "./assets/styles/ag-theme-alpine.css";
+
 /* You can add global styles to this file, and also import other style files */
 body {
   // background-color: #E6ECF0; // twitter: #E6ECF0; dark: #374447; gris: #E6ECF0
