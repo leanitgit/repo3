@@ -1,4 +1,4 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { version } from '../../../../package.json';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
@@ -15,7 +15,7 @@ export class LoginPageComponent implements OnInit {
 
   constructor(
     private auth: AngularFireAuth,
-    private zone: NgZone,
+    //private zone: NgZone,
     private router: Router
   ) { }
 
@@ -24,10 +24,11 @@ export class LoginPageComponent implements OnInit {
       if (user) {
         // check here if user must pass through getting-started
 
+        this.router.navigate([environment.entryRoute]);
         // https://stackoverflow.com/questions/51455545/when-to-use-ngzone-run
-        this.zone.run(() => {
-          this.router.navigate([environment.entryRoute]);
-        })
+        // this.zone.run(() => {
+        //   this.router.navigate([environment.entryRoute]);
+        // })
       }
     });
   }

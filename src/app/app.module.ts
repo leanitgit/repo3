@@ -1,5 +1,5 @@
-import 'zone.js';
-import 'zone.js/dist/long-stack-trace-zone.js';
+//import 'zone.js';
+//import 'zone.js/dist/long-stack-trace-zone.js';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
