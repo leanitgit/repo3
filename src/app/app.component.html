@@ -5,7 +5,7 @@
     <button mat-button [matMenuTriggerFor]="menu">Menu</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="openCandidatePage()" >Candidate</button>
-      <button mat-menu-item (click)="signOutClick()" >Work Tracker</button>
+      <button mat-menu-item (click)="openWorkTrackerPage()" >Work Tracker</button>
     </mat-menu>
 </div>
 <router-outlet (activate)="onRouterOutletActivate($event)"></router-outlet>

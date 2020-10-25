@@ -1,14 +1,4 @@
 <br><br>
-<p>Candidate Formatted:</p>
-<ag-grid-angular
-    style="width: 90%; height: 250px;"
-    class="ag-theme-alpine"
-    [rowData]="rowData"
-    [columnDefs]="columnDefs"
-    (gridReady)="onGridReady($event)"
->
-</ag-grid-angular>
-
   <p>Candidate list2:</p>
   <ul>
     <li class="text" *ngFor="let candidate of candidates | async">

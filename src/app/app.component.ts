@@ -52,7 +52,13 @@ export class AppComponent implements OnInit {
 
   openCandidatePage(){
     if (this.auth.authState) {
-      this.router.navigateByUrl(environment.entryRoute);
+      this.router.navigateByUrl(environment.candidateRoute);
+    }
+  }
+
+  openWorkTrackerPage(){
+    if (this.auth.authState) {
+      this.router.navigateByUrl(environment.workTrackerRoute);
     }
   }
 }

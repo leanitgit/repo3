@@ -22,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { GettingStartedPageComponent } from './pages/getting-started-page/getting-started-page.component';
 import { CandidatePageComponent } from './pages/candidate-page/candidate-page.component';
+import { WorkTrackerPageComponent } from './pages/work-tracker-page/work-tracker-page.component';
 
 // PrimeNG components
 import { ButtonModule } from 'primeng/button';

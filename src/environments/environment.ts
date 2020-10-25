@@ -8,7 +8,8 @@
 export const environment = {
   production: false,
   entryRoute: 'getting-started',
-  candidateRoute: 'candidate',
+  candidateRoute: 'candidate',  
+  workTrackerRoute: 'work-tracker',
   firebaseConfig: {
     appId: '855666881580',
     apiKey: 'AIzaSyBKe7rz6mjD8TdhsCvc6qkJbauAN6tryPo',

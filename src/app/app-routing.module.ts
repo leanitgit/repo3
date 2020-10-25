@@ -5,6 +5,7 @@ import { GettingStartedPageComponent } from './pages/getting-started-page/gettin
 import { CandidatePageComponent } from './pages/candidate-page/candidate-page.component';
 import { AngularFireAuthGuard, redirectUnauthorizedTo, redirectLoggedInTo } from '@angular/fire/auth-guard';
 import { environment } from 'src/environments/environment';
+import { WorkTrackerPageComponent } from './pages/work-tracker-page/work-tracker-page.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['/']);
 const redirectLoggedInToEntryRoute = () => redirectLoggedInTo([environment.entryRoute]);
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: '', component: LoginPageComponent, canActivate: [ AngularFireAuthGuard ], data: { authGuardPipe: redirectLoggedInToEntryRoute } },
   { path: environment.entryRoute, component: GettingStartedPageComponent, canActivate: [ AngularFireAuthGuard ], data: { authGuardPipe: redirectUnauthorizedToLogin }  },
   { path: environment.candidateRoute, component: CandidatePageComponent, canActivate: [ AngularFireAuthGuard ], data: { authGuardPipe: redirectUnauthorizedToLogin }  },
+  { path: environment.workTrackerRoute, component: WorkTrackerPageComponent, canActivate: [ AngularFireAuthGuard ], data: { authGuardPipe: redirectUnauthorizedToLogin }  },
 ];
 
 @NgModule({
