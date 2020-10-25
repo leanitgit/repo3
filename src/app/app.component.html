@@ -2,10 +2,13 @@
     <img src="/assets/logo.jpg" style="width: 140px; float: left">
     <button pButton (click)="signOutClick()" label="Sign out" style="float: right;"></button>
 
+    <div style="text-align: center;">
     <button mat-button [matMenuTriggerFor]="menu">Menu</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item (click)="openCandidatePage()" >Candidate</button>
       <button mat-menu-item (click)="openWorkTrackerPage()" >Work Tracker</button>
+      <button mat-menu-item (click)="openGettingStartedPage()" >Bench Process</button>
     </mat-menu>
+  </div>
 </div>
 <router-outlet (activate)="onRouterOutletActivate($event)"></router-outlet>

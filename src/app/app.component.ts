@@ -50,6 +50,12 @@ export class AppComponent implements OnInit {
       });
   }
 
+  openGettingStartedPage(){
+    if (this.auth.authState) {
+      this.router.navigateByUrl(environment.entryRoute);
+    }
+  }
+
   openCandidatePage(){
     if (this.auth.authState) {
       this.router.navigateByUrl(environment.candidateRoute);
