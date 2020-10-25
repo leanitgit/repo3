@@ -24,7 +24,7 @@ export class LoginPageComponent implements OnInit {
       if (user) {
         // check here if user must pass through getting-started
 
-        this.router.navigate([environment.entryRoute]);
+        this.router.navigate([environment.candidateRoute]);
         // https://stackoverflow.com/questions/51455545/when-to-use-ngzone-run
         // this.zone.run(() => {
         //   this.router.navigate([environment.entryRoute]);

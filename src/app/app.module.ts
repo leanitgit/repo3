@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 
 // Firebase components
 import { FirebaseService } from './services/firebase.service';
+import { FirebaseDBService } from './services/firebase-db.service';
+import { FirebaseFileService } from './services/firebase-file.service';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
@@ -19,6 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // Page Components
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { GettingStartedPageComponent } from './pages/getting-started-page/getting-started-page.component';
+import { CandidatePageComponent } from './pages/candidate-page/candidate-page.component';
 
 // PrimeNG components
 import { ButtonModule } from 'primeng/button';
@@ -28,11 +31,16 @@ import { MessageModule } from 'primeng/message';
 import { HttpClientModule } from '@angular/common/http';
 import { AgGridModule } from 'ag-grid-angular';
 
+//material components
+import { MatSliderModule } from '@angular/material/slider';
+import {MatMenuModule} from '@angular/material/menu';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    GettingStartedPageComponent
+    GettingStartedPageComponent,
+    CandidatePageComponent
   ],
   imports: [
     BrowserModule,
@@ -49,9 +57,15 @@ import { AgGridModule } from 'ag-grid-angular';
     InputTextModule,
     MessageModule,
     HttpClientModule,
+    MatSliderModule,
+    MatMenuModule,
     AgGridModule.withComponents([])
   ],
-  providers: [ AngularFireAuth, AngularFirestore, FirebaseService ],
+  providers: [ AngularFireAuth, 
+               AngularFirestore, 
+               FirebaseService, 
+               FirebaseDBService, 
+               FirebaseFileService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

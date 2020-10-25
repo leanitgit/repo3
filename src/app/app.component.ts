@@ -49,4 +49,10 @@ export class AppComponent implements OnInit {
         this.router.navigateByUrl('/');
       });
   }
+
+  openCandidatePage(){
+    if (this.auth.authState) {
+      this.router.navigateByUrl(environment.entryRoute);
+    }
+  }
 }
